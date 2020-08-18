@@ -6,11 +6,13 @@ function fix159775_add_to_cart($atts, $content = null){
 	?>
 	<script type="text/javascript">
 		jQuery(function($){
-			// $('.fixcoladdorc').on('click', function(e){
-			// 	e.preventDefault();
-			// 	alert('11');
-			// 	return false;
-			// });
+			$('.fix159775_add_to_cart').on('click', function(e){
+				e.preventDefault();
+				// alert('11');
+				var post_id = $(this).attr('data-id');
+				console.log(post_id);
+				return false;
+			});
 			
 			//jet-listing-items
 			//fixrowproduto
@@ -26,9 +28,9 @@ function fix159775_add_to_cart($atts, $content = null){
 
 
 	<div class="elementor-button-wrapper">
-		<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+		<a href="#" data-id="<?php echo $post->ID ?>" class="fix159775_add_to_cart elementor-button-link elementor-button elementor-size-sm" role="button">
 			<span class="elementor-button-content-wrapper">
-				<span class="elementor-button-text">xxxxxxxx</span>
+				<span class="elementor-button-text">ADICIONAR AO ORÇAMENTO</span>
 			</span>
 		</a>
 	</div>
