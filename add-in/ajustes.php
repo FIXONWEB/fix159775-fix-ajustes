@@ -14,7 +14,7 @@ function fix159775_add_to_cart($atts, $content = null){
 				console.log(post_id);
 
 				$.ajax({
-					url:"<?php echo site_url() ?>/fix159775_add_to_cart/?id=<?php echo $post_id ?>",
+					url:"<?php echo site_url() ?>/fix159775_add_to_cart/?id="+post_id,
 					// method:"POST",
 					method:"GET",
 					// data: new FormData(this),
