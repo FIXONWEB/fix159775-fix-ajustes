@@ -14,10 +14,11 @@ function fix159775_add_to_cart($atts, $content = null){
 				console.log(post_id);
 
 				$.ajax({
-					url:"<?php echo site_url() ?>/fix159775_add_to_cart",
-					method:"POST",
+					url:"<?php echo site_url() ?>/fix159775_add_to_cart/?id=<?php echo $post_id ?>",
+					// method:"POST",
+					method:"GET",
 					// data: new FormData(this),
-					data: "id="+post_id,
+					// data: "id="+post_id,
 					dataType:"json",
 					contentType:false,
 					cache:false,
@@ -62,7 +63,8 @@ add_action( 'parse_request', 'fix159775_parse_request');
 function fix159775_parse_request( &$wp ) {
 	global $woocommerce;
 	if($wp->request == 'fix159775_add_to_cart'){
-		$id = isset($_POST['id']) ? $_POST['id'] : 0 ;
+		// $id = isset($_POST['id']) ? $_POST['id'] : 0 ;
+		$id = isset($_GET['id']) ? $_GET['id'] : 0 ;
 		$woocommerce->cart->add_to_cart( $id );
 		exit;
 	}
