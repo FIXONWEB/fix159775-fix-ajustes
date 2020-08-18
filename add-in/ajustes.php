@@ -2,7 +2,7 @@
 add_shortcode("fix159775_add_to_cart", "fix159775_add_to_cart");
 function fix159775_add_to_cart($atts, $content = null){
 	global $post;
-	echo "<div>--".$post->ID."--</div>";
+	// echo "<div>--".$post->ID."--</div>";
 	//$woocommerce->cart->add_to_cart( $product_id );
 	?>
 	<script type="text/javascript">

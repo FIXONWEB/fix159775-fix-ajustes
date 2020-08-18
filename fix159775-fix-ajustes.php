@@ -7,7 +7,7 @@
  * Author URI:      https://fixonweb.com.br
  * Text Domain:     fix159775-fix-ajustes
  * Domain Path:     /languages
- * Version:         0.1.14
+ * Version:         0.1.15
  *
  * @package         Fix159775_Fix_Ajustes
  */
