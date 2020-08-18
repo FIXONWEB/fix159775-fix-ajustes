@@ -6,7 +6,7 @@ function fix159775_add_to_cart($atts, $content = null){
 	?>
 	<script type="text/javascript">
 		jQuery(function($){
-			$('.fix159775_add_to_cart').on('click', function(e){
+			$('.fix159775_add_to_cart_<?php echo $post->ID ?>').on('click', function(e){
 				e.preventDefault();
 				// alert('11');
 				var post_id = $(this).attr('data-id');
@@ -28,7 +28,7 @@ function fix159775_add_to_cart($atts, $content = null){
 
 
 	<div class="elementor-button-wrapper">
-		<a href="#" data-id="<?php echo $post->ID ?>" class="fix159775_add_to_cart elementor-button-link elementor-button elementor-size-sm" role="button">
+		<a href="#" data-id="<?php echo $post->ID ?>" class="fix159775_add_to_cart<?php echo $post->ID ?> elementor-button-link elementor-button elementor-size-sm" role="button">
 			<span class="elementor-button-content-wrapper">
 				<span class="elementor-button-text">ADICIONAR AO ORÇAMENTO</span>
 			</span>
