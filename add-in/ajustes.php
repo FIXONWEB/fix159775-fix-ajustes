@@ -23,5 +23,16 @@ function fix159775_add_to_cart($atts, $content = null){
 
 		});
 	</script>
+
+
+	<div class="elementor-button-wrapper">
+		<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+			<span class="elementor-button-content-wrapper">
+				<span class="elementor-button-text">xxxxxxxx</span>
+			</span>
+		</a>
+	</div>
+
+
 	<?php
 }
