@@ -41,9 +41,9 @@ function fix159775_add_to_cart($atts, $content = null){
 	<?php
 }
 
-add_action( 'parse_request', 'fix159775__parse_request');
-function fix159775__parse_request( &$wp ) {
-	
+add_action( 'parse_request', 'fix159775_parse_request');
+function fix159775_parse_request( &$wp ) {
+	global $woocommerce;
 	if($wp->request == 'fix159775_add_to_cart'){
 		$woocommerce->cart->add_to_cart( 131 );
 		exit;
