@@ -12,6 +12,23 @@ function fix159775_add_to_cart($atts, $content = null){
 				// alert('11');
 				var post_id = $(this).attr('data-id');
 				console.log(post_id);
+
+				$.ajax({
+					url:"<?php echo site_url() ?>/fix159775_add_to_cart",
+					method:"POST",
+					// data: new FormData(this),
+					data: "id="+post_id,
+					dataType:"json",
+					contentType:false,
+					cache:false,
+					processData:false,
+					success:function(data){
+						// $('#fix158716_form_upload_foto').html('<div class="alert alert-success">'+data.success+'</div>');
+						// $('#fix158716_form_upload_foto')[0].reset();
+						
+					}
+				})
+
 				return false;
 			});
 
