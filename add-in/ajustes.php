@@ -10,7 +10,9 @@ function fix159775_add_to_cart($atts, $content = null){
 			// 	return false;
 			// });
 			
-			$('.fixrowproduto ').on('click', function(e){
+			//jet-listing-items
+			//fixrowproduto
+			$('.jet-listing-items').on('click', function(e){
 				console.log('fixrowproduto');
 				var post_id = $(this).attr('data-post-id');
 				console.log(post_id);
