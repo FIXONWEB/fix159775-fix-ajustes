@@ -25,9 +25,9 @@ function fix159775_add_to_cart($atts, $content = null){
 					success:function(data){
 						// $('#fix158716_form_upload_foto').html('<div class="alert alert-success">'+data.success+'</div>');
 						// $('#fix158716_form_upload_foto')[0].reset();
-						
+
 					}
-				})
+				});
 
 				return false;
 			});
